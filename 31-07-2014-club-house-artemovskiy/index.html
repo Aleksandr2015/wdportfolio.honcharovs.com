@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+        <meta name="description" content="">
+
+        <meta name="author" content="">
+
+        <link rel="shortcut icon" href="">
+
+        <!-- Bootstrap core CSS -->
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <link href="css/non-responsive.css" rel="stylesheet">
+
+        <!--Font-->
+
+        <link rel="stylesheet" href="fonts/font.css" type="text/css" />
+
+        <!--Cust styles-->
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+        <!--[if lt IE 9]>
+
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+        <![endif]-->
+
+    </head>
+
+
+
+    <body data-spy="scroll" data-target=".navbar-fixed-top" style="padding-top:40px;">
+
+        
+
+		<!-- Modal -->
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+		  <div class="modal-dialog">
+
+			<div class="modal-content">
+
+			  <div class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+			  </div>
+
+			  <div class="modal-body">
+
+			  	<div class="cust-a fs25 text-center">Оставьте свою заявку и мы с Вами свяжемся!</div>
+
+			  	<form class="center-block" action="post.php" method="post">
+
+			  		<input type="text" name="name" placeholder='введите ваше имя' required />
+
+			  		<input type="tel" name="tel" placeholder="введите ваш телефон" required />
+
+			  		<input type="hidden" class="form-subject" name="subject" />
+
+			  		<button class="cust-btn fs25" type="submit">Оставить заявку</button>
+
+			  	</form>
+
+			  </div>
+
+			</div>
+
+		  </div>
+
+		</div>		
+
+		<!--Modal End-->
+		
+        <!-- Main navigation -->
+
+		<nav class="cust-nav navbar navbar-default navbar-fixed-top" role="navigation">               
+                      
+            <ul class="nav navbar-nav fs14">
+
+                <a class="navbar-brand page-scroll logo" href="#page-top">Клубный дом "Артемовский"</a>
+
+                <li class="hidden">
+
+                    <a class="page-scroll" href="#page-top"></a>
+
+                </li>                        
+
+                <li class="active">
+
+                    <a class="page-scroll" href="#page-top">Главная</a>
+
+                </li>
+
+                <li>
+
+                    <a class="page-scroll" href="#photo">Фото объекта</a>
+
+                </li>
+
+                <li>
+
+                    <a class="page-scroll" href="#process">Процесс покупки</a>
+
+                </li>
+
+                <li>
+
+                    <a class="page-scroll" href="#rewievs">Отзывы</a>
+
+                </li>
+
+                <li>
+
+                    <a class="page-scroll" href="#contacts">Контакты</a>
+
+                </li>
+
+                <li>
+
+                    <a href="#callback" class="btn-subject" data-toggle="modal" data-target="#myModal">Заказать обратный звонок</a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+		<div class="container">            
+
+            <div class="row mt70" id='page-top'>
+
+                <div class="col-xs-24 text-center">
+
+                    <h2 class="fs37 fw800 mb30">КЛУБНЫЙ ДОМ “АРТЕМОВСКИЙ”<br> <span class="cust-fwn fs30">Это комфорт по разумной цене!</span></h2>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-xs-24 cust-tbg">
+
+                    <div class="row">
+
+                        <div class="col-xs-10 col-xs-offset-1 pt110 cust-vid-top">
+
+                            <iframe style="float:right;" width="390" height="240" src="http://www.youtube.com/embed/gTuO5a6wRS0" frameborder="0" allowfullscreen></iframe>
+
+                        </div>
+
+                        <div class="col-xs-13 cust-bgw mt110 cust-form-top">
+
+                            <form class="cust-overview text-center" action="post.php" method="post">
+
+                                <div class="cust-tf-bg pt20">                                    
+
+                                    <p class="text-center fs24">Запишитесь на просмотр<br> квартир прямо сейчас</p>
+
+                                    <input class="cust-wh-input text-center cust-inp-name" type="text" name="name" placeholder="введите ваше имя" required /><br>
+
+                                </div>
+
+                                <input class="cust-wh-input text-center" type="tel" name="tel" required placeholder="введите ваш телефон"><br>
+
+                                <input type="hidden" value='Записаться на просмотр' name='subject'>
+
+                                <button class='cust-btn cust-c fs20' type='submit'>Записаться на просмотр</button>                            
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row mt25 cust-a-row-white-bg box">
+
+                <div class="col-xs-7">
+
+                    <img style="margin-left: 25px;" class="mt145" src="img/fig-3-a.png" alt="5 ПРОБЛЕМ,С КОТОРЫМИ СТАЛКИВАЮТСЯ ПРИ ПОКУПКЕ НОВОЙ КВАРТИРЫ">
+
+                </div>
+
+                <div class="col-xs-17 pt5 fs20">
+
+                    <p style="color:#202020;margin:0;">
+
+                        <span class="cust-5problem-1"></span>
+
+                        <span class="cust-5problem-text">Дом не достроен или даже не начато строительство</span>
+
+                    </p>
+
+                    <p style="color:#202020;margin:0;">
+
+                        <span class="cust-5problem-2"></span>
+
+                        <span class="cust-5problem-text">Сроки сдачи объекта в эксплуатацию затягиваются на<br> неопределенное время</span>
+
+                    </p>
+
+                    <p style="color:#202020;margin:0;">
+
+                        <span class="cust-5problem-3"></span>
+
+                        <span class="cust-5problem-text">Нет полного пакета разрешительных документов на<br> землю и на строительство</span>
+
+                    </p>
+
+                    <p style="color:#202020;margin:0;">
+
+                        <span class="cust-5problem-4"></span>
+
+                        <span class="cust-5problem-text">Строительство закончено, но планировка и площади не<br> соответствуют заявленным</span>
+
+                    </p>
+
+                    <p style="color:#202020;margin:0;">
+
+                        <span class="cust-5problem-5"></span>
+
+                        <span class="cust-5problem-text">Дом не подключен к коммунальным городским сетям</span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="row cust-r-g mbot30">
+
+                <div class="col-xs-24 text-center">
+
+                    <h2 class="cust-text-uppercase mt30 mb30" style="line-height:50px;">Вы ведь не хотите столкнуться с этими проблемами ?<br> Тогда  закажите обратный звонок!</h2>
+
+                    <form action="post.php" method="post">
+
+                        <input class="fs17 mb30" type="text" name="name" placeholder="введите ваше имя" required /><br>
+
+                        <input class="fs17 mb30" type="tel" name="tel" placeholder="введите ваш телефон" required /><br>
+
+                        <input type="hidden" name="subject" value="Oбратный звонок">
+
+                        <button class='cust-btn-shw cust-c fs25 wdth305' type='submit'>Заказать звонок</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="row box">
+
+                <div class="col-xs-24">
+
+                    <h2 class="topic fs34 mb30">7 ФАКТОВ ПОДТВЕРЖДАЮЩИХ НАДЕЖНОСТЬ<br> КЛУБНОГО ДОМА “АРТЕМОВСКИЙ”</h2>
+
+                </div>
+
+            </div>
+
+            <div class="row cust-7-facts" style='margin-bottom:-70px;'>
+                
+                <div class="cust-facts-img-left"></div>
+
+                <div class="cust-r-ab">
+
+                    <span class="cust-text-blue fs23 mt30">Факт 1</span><br>
+
+                    <span class="fs22 d-i-block">Дата введения дома в эксплуатацию: Ноябрь 2014 года</span>
+
+                    <ul class="cust-text-gray lsnone cust-ul-bg-round-shad fs18">
+
+                        <li>1. Решение ГорИсполкома на проектирование жилого дома.</li>
+
+                        <li>2. Решение ГорИсполкома на смену целевого назначения<br> земли и начало строительства.</li>
+
+                        <li>3. Декларация ГАСК на начало строительных работ.</li>
+
+                        <li>4. Получены тех. условия от коммунальных служб</li>
+
+                    </ul>
+                    
+                </div>
+                               
+                <div class="cust-facts-img-right"></div>
+                
+                <div class="cust-r-ab">
+					<span class="cust-text-blue fs23 mt15">Факт 2</span>
+					
+					<span class="fs22 d-i-table ml180">Все разрешенные документы в полном порядке</span>
+               	
+                    <ul class="cust-text-gray lsnone cust-ul-bg-round-shad fs18">
+
+                        <li>1. Решение ГорИсполкома на проектирование жилого дома.</li>
+
+                        <li>2. Решение ГорИсполкома на смену целевого назначения<br> земли и начало строительства.</li>
+
+                        <li>3. Декларация ГАСК на начало строительных работ.</li>
+
+                        <li>4. Получены тех. условия от коммунальных служб</li>
+
+                    </ul>
+               	
+               	</div>
+
+
+            </div>
+
+            <div class="row" style="margin-bottom:-33px;">
+
+                <div class="cust-facts-img-left-2"></div>
+
+                <div class="ml180 cust-r-ab">
+                	
+                    <span class="cust-text-blue fs23 mt5">Факт 3</span><br>
+
+                    <span class="fs22 d-i-block mt5">Применение энергосберегающих технологий</span>                    
+                    <ul class="cust-text-gray lsnone cust-ul-bg-round-shad fs18 cust-l0">
+
+                        <li>1. Решение ГорИсполкома на проектирование жилого дома.</li>
+
+                        <li>2. Решение ГорИсполкома на смену целевого назначения<br> земли и начало строительства.</li>
+
+                        <li>3. Декларация ГАСК на начало строительных работ.</li>
+
+                        <li>4. Получены тех. условия от коммунальных служб</li>
+
+                    </ul>
+                	
+                </div>
+
+                <div class="cust-facts-img-right-2"></div>
+
+                <div class="cust-r-ab">
+
+                    <span class="cust-text-blue fs23 mt15">Факт 4</span>
+
+                    <span class="fs22 d-i-table ml180">Сданный в эксплуатацию и заселенный соседний<br> малоквартирный дом нашей компанией</span>
+                    
+                    <ul class="cust-text-gray lsnone cust-ul-bg-round-shad fs18">
+
+                        <li>1. Решение ГорИсполкома на проектирование жилого дома.</li>
+
+                        <li>2. Решение ГорИсполкома на смену целевого назначения<br> земли и начало строительства.</li>
+
+                        <li>3. Декларация ГАСК на начало строительных работ.</li>
+
+                        <li>4. Получены тех. условия от коммунальных служб</li>
+
+                    </ul>
+
+                </div>                
+
+            </div>           
+
+            <div class="row" style="margin-bottom:-50px;">
+
+                <div class="cust-facts-img-left-3"></div>
+
+                <div class="cust-r-ab">
+
+                    <span class="cust-text-blue fs23">Факт 5</span><br>
+
+                    <span class="fs22 d-i-block">Монолитный железобетонный каркас с заполнением<br> проемов газобетонными блоками</span>
+                    
+                    <ul class="cust-text-gray lsnone cust-ul-bg-round-shad fs18">
+
+                        <li>1. Решение ГорИсполкома на проектирование жилого дома.</li>
+
+                        <li>2. Решение ГорИсполкома на смену целевого назначения<br> земли и начало строительства.</li>
+
+                        <li>3. Декларация ГАСК на начало строительных работ.</li>
+
+                        <li>4. Получены тех. условия от коммунальных служб</li>
+
+                    </ul>
+                                    
+                </div>
+
+                    <div class="cust-facts-img-right-3"></div>
+                                                            
+                <div class="cust-r-ab">    
+
+                    <span class="cust-text-blue fs23 mt15">Факт 6</span>
+
+                    <span class="fs22 d-i-table ml180">Безопасное и комфортное пространство для детей<br> и взрослых</span>
+                    
+                    <ul class="cust-text-gray lsnone cust-ul-bg-round-shad fs18">
+
+                        <li>1. Решение ГорИсполкома на проектирование жилого дома.</li>
+
+                        <li>2. Решение ГорИсполкома на смену целевого назначения<br> земли и начало строительства.</li>
+
+                        <li>3. Декларация ГАСК на начало строительных работ.</li>
+
+                        <li>4. Получены тех. условия от коммунальных служб</li>
+
+                    </ul>
+
+                </div>                
+
+            </div>            
+
+            <div class="row">
+
+                <div class="cust-facts-img-left-4"></div>
+
+                <div class="cust-r-ab">
+
+                    <span class="cust-text-blue fs23 mt15">Факт 7</span><br>
+
+                    <span class="fs22 d-i-block">Застройщик и его семья имеют квартиры в этом доме</span>
+                    
+                    <ul class="cust-text-gray lsnone cust-ul-bg-round-shad fs18">
+
+                        <li>1. Решение ГорИсполкома на проектирование жилого дома.</li>
+
+                        <li>2. Решение ГорИсполкома на смену целевого назначения<br> земли и начало строительства.</li>
+
+                        <li>3. Декларация ГАСК на начало строительных работ.</li>
+
+                        <li>4. Получены тех. условия от коммунальных служб</li>
+
+                    </ul>
+                    
+                </div>
+
+            </div>
+
+            <div class="row box text-center">
+
+                <h2 class="topic fs34 mb15">КЛУБНЫЙ ДОМ “АРТЕМОВСКИЙ”</h2>
+
+                <button class='cust-btn-gray-cen fs22 mb15' type='button'>ГЕОГРАФИЧЕСКОЕ РАЗМЕЩЕНИЕ</button>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10582.939660054977!2d35.04975199999999!3d48.46161549999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1406014017058" width="95%" height="640" frameborder="0" style="border:0;"></iframe>
+
+                <div id="photo" style='margin-bottom:30px;'></div>
+                
+            </div>
+
+            <div class="row mt45"><!-- Фото объекта -->
+
+                <div class="col-xs-12" style="margin-left:15px;">
+
+                    <img src="img/fig-28.png" alt="">
+
+                </div>
+
+                <div class="col-xs-11" style="margin-left:-10px;">
+
+                    <img src="img/fig-28.png" alt="">
+
+                </div>
+
+            </div>
+
+            <div class="row text-center mt30">
+                
+                <div class='cust-btn-gray-cen fs22 mb15' style="padding-top:5px;display:inline-block;">Поэтажная схема разреза здания</div>
+                
+                <div class="carousel slide article-slide" id="article-photo-carousel">
+                  
+                  <div class="wrapper-for-hover-button">
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner inner-1 cont-slider">
+                    
+                    <div class="item active">
+                      <img alt="" title="" src="img/fig-29.png">
+                    </div>
+                    <div class="item">
+                      <img alt="" title="" src="img/fig-29.png">
+                    </div>
+                    <div class="item">
+                      <img alt="" title="" src="img/fig-29.png">
+                    </div>
+                    <div class="item">
+                      <img alt="" title="" src="img/fig-29.png">
+                    </div>                
+                  </div>
+                  
+                    <div class="cust-r-ac">
+                    	<button class='cust-r-ac-btn cust-btn fs25 btn-subject' type='button' data-toggle="modal" data-target="#myModal">Узнать стоимость</button>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class='cust-btn-gray-cen fs22 mt30 mb10' type='button' style="padding:5px 75px;display:inline-block;">Планы квартир</div>
+                  
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#article-photo-carousel">
+                          <img alt="" src="img/fig-35.png">
+                        </li>
+                        <li class="" data-slide-to="1" data-target="#article-photo-carousel">
+                          <img alt="" src="img/fig-35.png">
+                        </li>
+                        <li class="" data-slide-to="2" data-target="#article-photo-carousel">
+                          <img alt="" src="img/fig-35.png">
+                        </li>
+                        <li class="" data-slide-to="3" data-target="#article-photo-carousel">
+                          <img alt="" src="img/fig-35.png">
+                        </li>               
+							<!-- Controls -->
+						  <a class="carousel-controls-prev" href="#article-photo-carousel" role="button" data-slide="prev" title="Назад">
+							<img src="img/fig-36.png" alt="prev">
+						  </a>
+						  <a class="carousel-controls-next" href="#article-photo-carousel" role="button" data-slide="next" title="Вперед">
+							<img src="img/fig-37.png" alt="next">
+						  </a>
+                    </ol>
+                    
+                </div>
+                
+            </div><!-- row -->
+
+            <div class="row box text-center mt50 pt5 pb10" style="min-height:100px;">
+
+                <img class="cust-round-voice" src="img/fig-31.png" alt="">
+
+                <button class='cust-btn-shw cust-c fs25 btn-subject' type='button' style="text-transform:uppercase;" data-toggle="modal" data-target="#myModal">Запросить голосовой прайс-лист</button>
+
+            </div>
+
+            
+
+            <div class="row box mt60 pb10">
+
+                <div class="col-xs-11 text-right">
+
+                    <p class="fs20" style="text-transform:uppercase;">Куплено квартир:</p>
+
+                    <img class="cust-sell-rent-flat" src="img/fig-33.png" alt="">
+
+                </div>
+
+                <div class="col-xs-2 text-center">
+
+                    <div class="cust-vert-line">
+
+                        <img src="img/fig-32.png" alt="">
+
+                    </div>
+
+                </div>
+
+                <div class="col-xs-11 text-left">
+
+                    <p class="fs20" style="text-transform:uppercase;">Осталось квартир:</p>
+
+                </div>
+
+            </div>       
+
+            
+
+            <div class='row cust-r-m mt50'>
+
+                <div class='topic fs34'>основные ценности клубного дома "Артемовский"</div>
+
+                <div class='text-center'>
+
+                    <img src="img/fig-2.png"></img>
+
+                </div>
+
+            </div>
+
+            <div class='row box cust-r-k'>
+
+                <div class="topic fs34">вы разделяете с нами эти ценности?</div>
+
+            </div>
+
+            <div class="row cust-r-l text-center">
+
+                    <button class='cust-btn-shw fs21 btn-subject' type='button' data-toggle="modal" data-target="#myModal">Записаться на просмотр квартир</button>
+
+            </div>
+
+            <div class="row cust-r-n">
+
+                <div class="topic fs34">сильные стороны клубного дома "артемовский"</div>
+
+                <div class='cust-list-advnt'>
+
+                    <div class="item">
+
+                        <img src="img/fig-16.png" alt'#' />
+
+                        <div class="text">Тихий район в центре города</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="img/fig-17.png" alt'#' />
+
+                        <div class="text">Собственная огороженная территория с озеленением зоной отдыха и детской площадкой</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="img/fig-18.png" alt'#' />
+
+                        <div class="text">Удобная транспортная развязка</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                </div>
+
+                <div class='cust-list-advnt'>
+
+                    <div class="item">
+
+                        <img src="img/fig-19.png" alt'#' />
+
+                        <div class="text">Подземный паркинг</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="img/fig-20.png" alt'#' />
+
+                        <div class="text">Пешая доступность к парку</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="img/fig-21.png" alt'#' />
+
+                        <div class="text">Малоквартирный дом: 27 квартир</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                </div>
+
+                <div class='cust-list-advnt'>
+
+                    <div class="item">
+
+                        <img src="img/fig-22.png" alt'#' />
+
+                        <div class="text">Постоянная охрана и система  видео-наблюдения</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="img/fig-23.png" alt'#' />
+
+                        <div class="text">Дом построен по всем европейским нормам</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="img/fig-24.png" alt'#' />
+
+                        <div class="text">Используемые материалы</div>
+
+                        <div class="hover">текст который виден при наведении курсора на иконку или заголовок</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row cust-r-a">
+
+                <div class='cust-r-b text-center text-uppercase fs30'>все ещё ищете идеальное место для жительства?<br> сделайте первый шаг к собственной идеальной квартире</div>
+
+                <div class='cust-r-c text-center'>
+
+                    <div class='col-xs-8 col-xs-offset-3 fs25'>Запишитесь на  просмотр квартир прямо сейчас</div>
+
+                    <div class='col-xs-7 col-xs-offset-2'>
+
+                        <form action="post.php" method="post">
+
+                            <input type="text" name="name" placeholder='введите ваше имя' required />
+
+                            <input type="tel" name='tel' placeholder='введите ваш телефон' required />
+
+                            <input type="hidden" name="subject" value="Записаться на просмотр">
+
+                            <button class='cust-btn fs21' type='submit'>Записаться на просмотр</button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row cust-r-d">
+
+                <div class='col-xs-18 col-xs-offset-3'>
+
+                    <ul>
+
+                        <li>клубный дом "артемовский" для</li>
+
+                        <li>Людей, которые хотят жить в центре города, но в тихом районе, вдали от городского шума.</li>
+
+                        <li>Людей, которые ценят комфорт и не хотят жить в больших “муравейниках”.</li>
+
+                        <li>Людей которые заботятся о безопасности себя и своих близких</li>
+
+                        <li>Людей, которые хотят жить с дружелюбными соседями, с похожими интересами и взглядами на жизнь.</li>
+
+                        <li>Людей, у которых есть дети или планируют пополнение в семье.</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="row cust-r-e">
+
+                <div class='cust-a fs30 text-uppercase text-center'>о нашей компании</div>
+
+                <div class='cust-b fs21'>Коммерческая организация — юридическое лицо, преследующее извлечение прибыли в качестве основной цели своей деятельности, в отличие от некоммерческой организации, которая не имеет целью извлечение прибыли и не распределяет полученную прибыль между участниками</div>
+
+                <div class='cust-c text-center'>
+
+                    <img src="img/fig-5.png" alt='#' />
+
+                    <img src="img/fig-6.png" alt='#' />
+
+                    <img src="img/fig-7.png" alt='#' />
+
+                </div>
+                
+                <div id="process"></div>
+
+            </div>     
+
+            <div class='row box cust-r-f' class="process-section"><!-- процесс покупки -->
+
+                <div class="topic fs34">процесс покупки квартиры</div>
+
+                <div class="cust-a text-center">
+
+                    <img src="img/fig-8.png" alt='#' />
+
+                </div>
+
+            </div>
+
+            <div class="row cust-r-g">
+
+                <div class="topic fs34">получите полную презеницию дома в разрезах и с <br> подробными планами в простом и удобном формате pfd</div>
+
+                <div class='col-xs-14 col-xs-offset-5 cust-a fs21'>
+
+                    <div class="row">
+
+                        <div class='col-xs-8'>
+
+                            <img src="img/fig-9.png" />
+
+                        </div>
+
+                        <div class='col-xs-16 text-center'>
+
+                            <form>
+
+                                <div class='fs21'>Введите Ваш Email и сразу получите доступ к презентации:</div>
+
+                                <input class='fs17' type="email" placeholder='введите ваш Email' required />
+
+                                <button class='cust-btn-shw fs25' type="submit">Получить презентицию дома</button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div id="rewievs" style='clear:both;'></div>
+
+            </div>      
+
+            <div class="row box cust-r-h" class="rewievs-section"><!-- отзывы -->
+
+                <div class='cust-a fs30 text-uppercase text-center'>отзывы от жильцов соседнего <br> сданного дома нашей компанией</div>
+
+                <div class='cust-b text-center'>
+
+                        <iframe width='400' height="250" src="https://www.youtube.com/embed/SbN26Pqx2Y0?rel=0" frameborder="0" allowfullscreen></iframe>
+
+                        <iframe width='400' height="250" src="https://www.youtube.com/embed/SbN26Pqx2Y0?rel=0" frameborder="0" allowfullscreen></iframe>
+
+                        <div id="contacts"></div>
+                    
+                </div>
+                
+
+            </div>           
+
+            <div class="row cust-r-i" class="contacts-section">
+
+                <div class='topic fs34'>как приехать к нам офис</div>
+
+                <div class='col-xs-14 cust-a'>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10582.939660054977!2d35.04975199999999!3d48.46161549999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1406014017058" width="100%" height="430" frameborder="0" style="border:0"></iframe>
+
+                    <div class='huita'></div>
+
+                </div>
+
+                <div class='col-xs-10 text-center'>
+
+                    <div class='fs21 cust-b'>Позвоните нам или закажите обратный звонок и мы Вам перезвоним!</div>
+
+                    <div class='fs25'>Тел +38 (067) 24-24-234</div>
+
+                    <div class='fs25'>Тел +38 (067) 24-24-234</div>
+
+                    <button class='cust-btn-shw cust-c fs25 btn-subject' type='button' data-toggle="modal" data-target="#myModal">Перезвоните мне</button>
+
+                </div>
+
+            </div>
+
+            <div class="row box cust-r-j">
+
+                <div class='fs21 text-center text-uppercase'>
+
+                    <img src="img/fig-10.png" /> 
+
+                        клубный дом "артемовский" 2014
+
+                </div>
+
+            </div>
+
+        </div><!-- .container -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- compiled and minified Bootstrap JavaScript -->
+
+        <script src="js/bootstrap.js"></script>        
+
+        <script src="js/jquery.easing.min.js"></script>
+
+        <!-- Buttons modal -->
+
+        <!--<script>		
+
+			var formSubject = document.querySelector('.form-subject');
+
+			var btnSubject = document.querySelectorAll('.btn-subject');
+
+			for (var i = 0; i < btnSubject.length; i++){
+
+				btnSubject[i].onclick = function () {
+
+					formSubject.value = this.innerHTML;
+
+				}
+
+			}
+
+        </script>-->
+
+        <!-- Scrolling navigation script -->
+
+        <script src="js/scrolling-nav.js"></script>
+        
+                <script>// Stop carousel
+					$('.carousel').carousel({
+					  interval: false
+					});</script>        
+
+    </body>
+
+</html>
+
