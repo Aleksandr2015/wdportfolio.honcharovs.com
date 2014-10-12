@@ -14,8 +14,32 @@
     </head>
     <body>
 
+        <!-- Honcharovs demo menu / Start -->
+        <style>
+            .honcharovs-demo-nav-button {
+                    height: 20px;
+                    margin-top: 8px;    
+                    margin-left: 0;
+                    margin-right: 20px;
+                    line-height: 0px !important;
+                }
+        </style>
+        <div class="nav navbar-fixed-top">
+            <div class="container-fluid" style="background-color:#333;border-bottom:1px solid #ccc;">
+                <ul class="nav navbar-nav" style="width:100%;height:50px;">
+                    <li><a class="btn btn-default btn-sm honcharovs-demo-nav-button" href="index.html">Главная</a></li>
+                    <li><a class="btn btn-default btn-sm honcharovs-demo-nav-button" href="opisanie-tovara.html">Описание товара</a></li>
+                    <li><a class="btn btn-default btn-sm honcharovs-demo-nav-button" href="seminar.html">Семинар</a></li>
+                    <li><a class="btn btn-default btn-sm honcharovs-demo-nav-button" href="user-profile.html">Профиль пользователя</a></li>
+                    <li><a class="btn btn-default btn-sm honcharovs-demo-nav-button" href="user-profile-billing.html">Биллинг</a></li>
+                    <li><a class="btn btn-default btn-sm honcharovs-demo-nav-button" href="user-profile-products.html">Продукты</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Honcharovs demo menu / End --> 
+        
         <!--Header-->
-        <header class="header">
+        <header class="header" style="margin-top:50px;">
             <div class="container">
 
                     <!--Cart-->
@@ -123,9 +147,9 @@
         <div class="container">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs nav-justified -billing" role="tablist">
-              <li><a href="#">Профиль</a></li>
-              <li class="active"><a href="#">Продукты</a></li>
-              <li><a href="#">Биллинг</a></li>
+              <li><a href="user-profile.html">Профиль</a></li>
+              <li class="active"><a href="user-profile-products.html">Продукты</a></li>
+              <li><a href="user-profile-billing.html">Биллинг</a></li>
             </ul>
 
             <!-- Tab panes -->
