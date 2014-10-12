@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Описание товара</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/r.css">
+        <link rel="stylesheet" href="css/s.css">
+
+    </head>
+    <body>
+
+        <!-- Modal enter -->
+        <div class="modal fade" id="m-autorize" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">                
+                <a href="#"><div class="social-gplus"></div></a>
+                <a href="#"><div class="social-tw"></div></a>
+                <a href="#"><div class="social-fb"></div></a>
+                <a href="#"><div class="social-vk"></div></a>                
+                <div class="modal-content">                    
+                    <div class="modal-body text-center autorize">
+                        <span class="ma-header">Вход</span><br>
+                        <span class="ma-text">Чтобы войти<br> введите свои данные</span>
+                        <form action="#" role="form">                            
+                            <div class="form-group">                                
+                                <input class="form-control" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+                            </div>                            
+                            <button type="submit" class="btn-cust autorize">Войти</button>                                                     
+                        </form>
+                        <a class="mafp" href="#"><span class="ma-text">Забыли пароль?</span></a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal register -->
+        <div class="modal fade" id="m-register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">                
+                <a href="#"><div class="social-gplus"></div></a>
+                <a href="#"><div class="social-tw"></div></a>
+                <a href="#"><div class="social-fb"></div></a>
+                <a href="#"><div class="social-vk"></div></a>                
+                <div class="modal-content">                    
+                    <div class="modal-body text-center register">
+                        <span class="mr-header">Регистрация</span><br>
+                        <span class="mr-text">Чтобы зарегистрироваться<br> введите свои данные </span>
+                        <form action="#" role="form">
+                            <div class="form-group">                                
+                                <input class="form-control" type="name" id="name" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">                                
+                                <input class="form-control" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+                            </div>
+                            <div class="checkbox">
+                                <input class="form-control" type="password_repeat" id="password_repeat" name="password_repeat" placeholder="Повторите пароль" required>
+                            </div>
+                            <button type="submit" class="btn-cust register">Зарегистрироваться</button>                            
+                        </form>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+
+        <!--Header-->
+        <header class="header">
+            <div class="container">
+
+                    <!--Cart-->
+                    <div class="[ cart -header ]">
+                        <input id='checker' type="checkbox">
+
+                        <!--visible part-->
+                        <div class="cart_visible">
+                            <!--items in basket-->
+                            <div class="cart_visible_basket">
+                                <div class="cart_visible_basket_items">2</div>
+                            </div>
+                            <!--total sum-->
+                            <div class="cart_visible_total">140 €</div>
+                            <!--show more-->
+                            <label class="cart_visible_label" for="checker"></label>
+                        </div>
+
+                        <!--hidden part-->
+                        <div class="cart_hidden">
+                           <!--table-->
+                            <div class="cart_hidden_table">
+                                <table>
+                                   <thead>
+                                        <tr>
+                                            <th><div>Ваши покупки</div></th>
+                                            <th><div>Цена, €</div></th>
+                                            <th><div>Кол-во</div></th>
+                                            <th><div>Итого, €</div></th>
+                                            <th></th>
+                                        </tr>
+                                   </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div>Курс 2 для личностного роста</div></td>
+                                            <td><div>140</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>140</div></td>
+                                            <td><div>Х</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="divider"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>Запись семинара</div></td>
+                                            <td><div>10</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>10</div></td>
+                                            <td><div>Х</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--btn-->
+                            <div class="cart_hidden_btn">
+                                <a class="[ btn-cust -cart ]" href='#'>Оплатить</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--Log In-->
+                    <div class="[ login -header ]">
+                        <img class="login_img" src="img/fig2.png" alt="photo">
+                        <a class="login_link" href="#" title="Log in" data-toggle="modal" data-target="#m-autorize">Авторизация</a>
+                        <a class="login_link" href="#" title="Sign up" data-toggle="modal" data-target="#m-register">Регистрация</a>
+                    </div>
+
+
+                    <!--Logo-->
+                    <a href="#" class="[ logo -header ]" title='Main P'>
+                        <img class="logo_img" src="img/fig1.png" alt="logo">
+                        <span class="logo_title">
+                            <span class="logo_title_text1">Круг Посвященных</span>
+                            <br>
+                            <span class="logo_title_text2">Ежеквартальный сборник Клуба Эффективных Лидеров</span>
+                        </span>
+                    </a>
+
+            </div>
+        </header>
+
+        <!--Navigation-->
+        <div class="[ container -h85 ]">
+            <nav class="navi">
+                <a href="#" class="navi_item"><span>Главная</span></a>
+                <a href="#" class="navi_item"><span>Оплата и доставка</span></a>
+                <a href="#" class="navi_item"><span>Регистрация</span></a>
+                <a href="#" class="navi_item"><span>Политика приватности</span></a>
+                <a href="#" class="navi_item"><span>Каталог продуктов</span></a>
+                <a href="#" class="navi_item active"><span>Записи семинаров</span></a>
+                <a href="#" class="navi_item"><span>Электронные издания</span></a>
+                <a href="#" class="navi_item"><span>Консультации</span></a>
+                <a href="#" class="navi_item"><span>Оплата членских взносов</span></a>
+            </nav>
+        </div>
+
+
+        <!--Panel-->
+        <div class="container">
+            <div class="panel-cust">Решение бизнеса</div>
+        </div>
+
+        <!--Opisanie tovara-->
+        <div class="container tovar">
+
+            <!--Left col-->
+            <div class="tovar_aside">
+
+                <!--Player-->
+                <div class="player">
+                   <div class="player-wrapper" style="border:1px solid #ccc; border-radius:5px;width:100%;height:150px;text-align:center;">
+                       <br><b style="font-size:30px;position:relative;top:5px;">Плагин плеера<br> выводить тут</b>
+                   </div>                    
+                </div>
+
+                <!--Card-->
+                <div class="[ card -tovar ]">
+                    <div class="card_img">
+                        <img src="img/fig7.png" alt="">
+                    </div>
+                    <div class="card_price">28€</div>
+                    <a class="btn-cust" href="#">Купить</a>
+
+                <!--File list-->
+                <ul class="file-list">
+                    <li class='file-list_title'>Файлы в этом выпуске:</li>
+                    <li class='file-list_item'><a href="#">Расширение бизнеса Ч1</a></li>
+                    <li class='file-list_item'><a href="#">Расширение бизнеса Ч2</a></li>
+                    <li class='file-list_item'><a href="#">Расширение бизнеса Ч3</a></li>
+                    <li class='file-list_item'><a href="#">Расширение бизнеса Ч4</a></li>
+                    <li class='file-list_item'><a href="#">Расширение бизнеса Ч5</a></li>
+                    <li class='file-list_item'><a href="#">Расширение бизнеса Ч6</a></li>
+                    <li class='file-list_item'><a href="#">Расширение бизнеса Ч7</a></li>
+                    <li class='file-list_item'><a href="#">Бизнес - этой война Ч1</a></li>
+                    <li class='file-list_item'><a href="#">Бизнес - этой война Ч2</a></li>
+                    <li class='file-list_item'><a href="#">Бизнес - этой война Ч3</a></li>
+                    <li class='file-list_item'><a href="#">Бизнес - этой война Ч4</a></li>
+                    <li class='file-list_item'><a href="#">Бизнес - этой война Ч5</a></li>
+                    <li class='file-list_item'><a href="#">Бизнес - этой война Ч6</a></li>
+                    <li class='file-list_item'><a href="#">Бизнес - этой война Ч7</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <!--Right col-->
+            <div class="tovar_content">
+                <p class="tovar_content_preview">
+                    «Данный выпуск посвящен вопросам организации, защиты и развития бизнеса, как в СНГ, так и<br> 
+                    во всем мире. Он может быть полезен, как тем кто хочет организовать свой бизнес, так и тем <br>
+                    кто уже создал и развивает или управляет бизнесом.»
+                </p>
+                <p class="tovar_content_text">В данном выпуске мы предлагаем Вам ознакомиться с записями семинаров «Расширение бизнеса» и «Бизнес — это война». Эти семинары
+включают в себя  описание эффективных методик создания и ведения бизнеса. Вы узнаете основные понятия в организации бизнеса, основные
+ошибки, которые делают начинающие бизнесмены и меры их избежания. Также Вы сможете расширить свой арсенал бизнес-инструментов и
+приёмов решения проблем, которые могут возникнуть про организации, ведения и расширения собственного бизнеса.</p>
+                <p class="tovar_content_text">Представленные записи семинаров содержат ответы на следующие вопросы:</p>
+                <ul class="tovar_content_list">
+                    <li class="tovar_content_list_item">базовая стратегия завоевания и контроля рынка;<br> завоевание регионального рынка;</li>
+                    <li class="tovar_content_list_item">соотношение силовых и пиарных элементов в стратегии завоевания рынка;</li>
+                    <li class="tovar_content_list_item">выход компании на новые рынки: предварительная подготовка;</li>
+                    <li class="tovar_content_list_item">выход компании на новые рынки: завоевание региона;</li>
+                    <li class="tovar_content_list_item">диверсификация бизнеса;</li>
+                    <li class="tovar_content_list_item">жизненный цикл бизнес-идеи и взаимные компенсации;</li>
+                    <li class="tovar_content_list_item">потоковая модель управления финансами;</li>
+                    <li class="tovar_content_list_item">финансовый менеджмент в бизнесе;</li>
+                    <li class="tovar_content_list_item">современные модели финансового обслуживания;</li>
+                    <li class="tovar_content_list_item">переход бизнеса к метауровню;</li>
+                    <li class="tovar_content_list_item">предпосылки перехода к метауровню;</li>
+                    <li class="tovar_content_list_item">технология вирусного сетевого маркетинга;</li>
+                    <li class="tovar_content_list_item">построение сетевой структуры бизнеса;</li>
+                    <li class="tovar_content_list_item">брэндинг и нейминг;</li>
+                    <li class="tovar_content_list_item">стратегия структурирования рынка.</li>
+                </ul>
+
+                <!--Social btns-->
+                <div class="social">
+                    <div class="social_text">Поделиться в соц. сетях</div>
+                    <a href="" class="social_btn" title="vk"></a>
+                    <a href="" class="social_btn" title="facebook"></a>
+                    <a href="" class="social_btn" title='twitter'></a>
+                    <a href="" class="social_btn" title="google+"></a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+               <!--tech-support-->
+                <div class="[ tech-support -footer ]">
+                    <div class="tech-support_text1">Техподдержка:</div>
+                    <div class="tech-support_text2">support.mediascan.ru</div>
+                    <div class="tech-support_text3">support@mediascan.ru</div>
+                </div>
+                <!--payments-->
+                <div class="[ pay-way -footer ]">
+                    <div class="pay-way_text">Принимаем к оплате:</div>
+                    <div class="pay-way_img">
+                        <img src="img/fig13.png" alt="pay">
+                    </div>
+                </div>
+                <!--copyright-->
+                <div class="[ copyright -footer ]">Copyright © Евгений Гильбо 1989 – 2014</div>
+            </div>
+        </footer>
+
+        <!--Scripts-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--Boo js-->
+        <script src='vendor/bootstrap/js/bootstrap.min.js'></script>
+
+    </body>
+</html>

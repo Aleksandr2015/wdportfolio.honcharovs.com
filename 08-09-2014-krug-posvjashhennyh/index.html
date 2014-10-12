@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Главная</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/r.css">
+        <link rel="stylesheet" href="css/s.css">
+
+    </head>
+    <body>
+        
+        <!-- Modal enter -->
+        <div class="modal fade" id="m-autorize" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">                
+                <a href="#"><div class="social-gplus"></div></a>
+                <a href="#"><div class="social-tw"></div></a>
+                <a href="#"><div class="social-fb"></div></a>
+                <a href="#"><div class="social-vk"></div></a>                
+                <div class="modal-content">                    
+                    <div class="modal-body text-center autorize">
+                        <span class="ma-header">Вход</span><br>
+                        <span class="ma-text">Чтобы войти<br> введите свои данные</span>
+                        <form action="#" role="form">                            
+                            <div class="form-group">                                
+                                <input class="form-control" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+                            </div>                            
+                            <button type="submit" class="btn-cust autorize">Войти</button>                                                     
+                        </form>
+                        <a class="mafp" href="#"><span class="ma-text">Забыли пароль?</span></a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal register -->
+        <div class="modal fade" id="m-register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">                
+                <a href="#"><div class="social-gplus"></div></a>
+                <a href="#"><div class="social-tw"></div></a>
+                <a href="#"><div class="social-fb"></div></a>
+                <a href="#"><div class="social-vk"></div></a>                
+                <div class="modal-content">                    
+                    <div class="modal-body text-center register">
+                        <span class="mr-header">Регистрация</span><br>
+                        <span class="mr-text">Чтобы зарегистрироваться<br> введите свои данные </span>
+                        <form action="#" role="form">
+                            <div class="form-group">                                
+                                <input class="form-control" type="name" id="name" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">                                
+                                <input class="form-control" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+                            </div>
+                            <div class="checkbox">
+                                <input class="form-control" type="password_repeat" id="password_repeat" name="password_repeat" placeholder="Повторите пароль" required>
+                            </div>
+                            <button type="submit" class="btn-cust register">Зарегистрироваться</button>                            
+                        </form>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+
+        <!--Header-->
+        <header class="header">
+            <div class="container">
+
+                    <!--Cart-->
+                    <div class="[ cart -header ]">
+                        <input id='checker' type="checkbox">
+
+                        <!--visible part-->
+                        <div class="cart_visible">
+                            <!--items in basket-->
+                            <div class="cart_visible_basket">
+                                <div class="cart_visible_basket_items">2</div>
+                            </div>
+                            <!--total sum-->
+                            <div class="cart_visible_total">140 €</div>
+                            <!--show more-->
+                            <label class="cart_visible_label" for="checker"></label>
+                        </div>
+
+                        <!--hidden part-->
+                        <div class="cart_hidden">
+                           <!--table-->
+                            <div class="cart_hidden_table">
+                                <table>
+                                   <thead>
+                                        <tr>
+                                            <th><div>Ваши покупки</div></th>
+                                            <th><div>Цена, €</div></th>
+                                            <th><div>Кол-во</div></th>
+                                            <th><div>Итого, €</div></th>
+                                            <th></th>
+                                        </tr>
+                                   </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div>Курс 2 для личностного роста</div></td>
+                                            <td><div>140</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>140</div></td>
+                                            <td><div>Х</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="divider"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>Запись семинара</div></td>
+                                            <td><div>10</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>10</div></td>
+                                            <td><div>Х</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--btn-->
+                            <div class="cart_hidden_btn">
+                                <a class="[ btn-cust -cart ]" href='#'>Оплатить</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--Log In-->
+                    <div class="[ login -header ]">
+                        <img class="login_img" src="img/fig2.png" alt="photo">
+                        <a class="login_link" href="#" title="Log in" data-toggle="modal" data-target="#m-autorize">Авторизация</a>
+                        <a class="login_link" href="#" title="Sign up" data-toggle="modal" data-target="#m-register">Регистрация</a>
+                    </div>
+
+
+                    <!--Logo-->
+                    <a href="#" class="[ logo -header ]" title='Main P'>
+                        <img class="logo_img" src="img/fig1.png" alt="logo">
+                        <span class="logo_title">
+                            <span class="logo_title_text1">Круг Посвященных</span>
+                            <br>
+                            <span class="logo_title_text2">Ежеквартальный сборник Клуба Эффективных Лидеров</span>
+                        </span>
+                    </a>
+
+            </div>
+        </header>
+
+        <!--Navigation-->
+        <div class="[ container -h110 ]">
+            <nav class="navi">
+                <a href="#" class="navi_item"><span>Главная</span></a>
+                <a href="#" class="navi_item"><span>Оплата и доставка</span></a>
+                <a href="#" class="navi_item"><span>Регистрация</span></a>
+                <a href="#" class="navi_item"><span>Политика приватности</span></a>
+                <a href="#" class="navi_item"><span>Каталог продуктов</span></a>
+                <a href="#" class="navi_item active"><span>Записи семинаров</span></a>
+                <a href="#" class="navi_item"><span>Электронные издания</span></a>
+                <a href="#" class="navi_item"><span>Консультации</span></a>
+                <a href="#" class="navi_item"><span>Оплата членских взносов</span></a>
+            </nav>
+        </div>
+
+        <!--Carousel-->
+        <div class="container">
+            <div class="main-carousel-wrap">           
+                <div class="carousel-header">
+                    <h2>Семинары КЭЛ:</h2>
+                </div>
+                <button class="prev">Предыдущий</button>
+                <button class="next">Следующий</button>
+
+                <div class="slides-wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="slides-content">
+                                    <h2>9-10 августа МОСКВА</h2>
+                                    <p>
+                                        БИОЭНЕРГЕТИКА: <br>
+                                        управление здоровьем <br>
+                                        и мотивацией <br>
+                                        семинар Е.В.Гильбо
+                                    </p>
+                                </div> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="slides-content">
+                                    <h2>
+                                        17-22 августа КОТКА
+                                    </h2>
+                                    <p>
+                                        <b>(Финляндия)</b> У НАС - ВСЁ<br>
+                                        ХОРОШО! Обсуждаем <br>
+                                        перспективы успеха <br>
+                                        летняя туса + семинар КЭЛ
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="slides-content">
+                                    <h2>
+                                        14-21 сентября Мальорка
+                                    </h2>
+                                    <p>
+                                        МИР ПОСЛЕ УКРАИНЫ: <br>
+                                        риски и возможности <br>
+                                        семинар М.Л.Хазина и <br>
+                                        Е.В.Гильбо
+                                    </p>
+                                </div>  
+                            </a>                          
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="slides-content">
+                                    <h2>
+                                        C 28 ноября по 12 декабря
+                                    </h2>
+                                    <p>
+                                        <b>ТЕНЕРИФЕ</b>
+                                        УСПЕХ В ЭПОХУ ПЕРЕМЕН: правильные <br>
+                                        взаимоотношения с новой <br>
+                                        реальностью зимний семинар КЭЛ
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="slides-content">
+                                    <h2>
+                                        9-10 августа МОСКВА
+                                    </h2>
+                                    <p>
+                                        БИОЭНЕРГЕТИКА:<br> 
+                                        управление здоровьем <br>
+                                        и мотивацией<br>
+                                        семинар Е.В.Гильбо
+                                    </p>   
+                                </div>
+                            </a>                   
+                        </li>
+                    </ul>
+                </div>
+            
+            </div>
+            
+        </div>
+
+        <!--Slider + Projects-->
+        <div class="[ container -m10 ]">
+            <!--Slider-->
+            <div class="[ slider -main-page ] main-slider">
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <!-- item -->
+                    <div class="item active">
+                        <img class="slider-bg-image" src="img/fig6.png" alt="" style="opacity:.5">
+                        <div style="
+                            width:303px;
+                            height:138px;
+                            position:absolute;
+                            top:26px;
+                            left:112px;
+                            background:url(img/fig27.png) no-repeat 0 0 transparent;
+                            background-size: 303px 138px;
+                            z-index:777;
+                        ">
+                            <div style="text-align:center;padding-right:27px;">
+                                <span style="font-size:30px;font-weight:800;">Внимание!</span><br>
+                                <span style="font-size:18px;font-weight:800;">До конца месяца действует </span><br>
+                                <span style="font-size:30px;font-weight:800;text-transform:uppercase;">АКЦИЯ! Спешите</span><br>
+                                <span style="font-size:20px;font-weight:800;text-transform:uppercase;">преобрести курс!</span>
+                            </div>
+                        </div>
+                        <div style="
+                            position:absolute;
+                            top: 10px;
+                            left: 420px;
+                            background-color:rgba(0,0,0,.3);
+                            width:390px;
+                            height:200px;
+                            overflow:hidden;
+                            z-index:777;
+                        ">
+                            <div style="
+                                font-size: 19px;
+                                font-weight: 800;
+                                background-color: #ffcc33;
+                                margin: 10px 0 7px 15px;
+                                width: 360px;
+                                text-align: center;
+                            ">
+                                Семинар «Управление реальностью»
+                            </div>
+                            <div style="
+                                font-size: 14px;
+                                margin: 7px 0 7px 15px;
+                                width: 360px;
+                                background-color: rgba(0,0,0,.5);
+                                color: #fff;
+                                padding: 5px 10px 10px;
+                                text-shadow: 1px 1px 3px #000;
+                            ">
+                                
+                                <i>(Выпуск 1-го квартала 2012г.)</i><br>
+                                В данном выпуске содержатся все записи<br>
+                                семинара «Управление реальностью» на<br>
+                                Тенерифе в 2012г.
+                            </div>
+                            <div style="
+                                font-size: 18px;
+                                color: #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 35px;
+                            ">
+                                <i>Старая цена: <strike>47€</strike></i>
+                            </div>
+                            <div style="
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: 800;
+                                text-shadow: 1px 1px 3px #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 5px;  
+                            ">                            
+                                Новая цена: <span style="font-size: 36px;position: relative;top: 6px;">35€</span>
+                            </div>
+                            <a style="
+                                position:absolute;
+                                bottom: 10px;
+                                right: 25px;
+                                z-index:777;
+                            "
+                            class="btn-cust" href="#">Купить</a>
+                        </div>
+                    </div>
+                    
+                    <!-- item -->
+                    <div class="item">
+                        <img class="slider-bg-image" src="img/fig6.png" alt="" style="opacity:.5">
+                        <div style="
+                            width:303px;
+                            height:138px;
+                            position:absolute;
+                            top:26px;
+                            left:112px;
+                            background:url(img/fig27.png) no-repeat 0 0 transparent;
+                            background-size: 303px 138px;
+                            z-index:777;
+                        ">
+                            <div style="text-align:center;padding-right:27px;">
+                                <span style="font-size:30px;font-weight:800;">Внимание!</span><br>
+                                <span style="font-size:18px;font-weight:800;">До конца месяца действует </span><br>
+                                <span style="font-size:30px;font-weight:800;text-transform:uppercase;">АКЦИЯ! Спешите</span><br>
+                                <span style="font-size:20px;font-weight:800;text-transform:uppercase;">преобрести курс!</span>
+                            </div>
+                        </div>
+                        <div style="
+                            position:absolute;
+                            top: 10px;
+                            left: 420px;
+                            background-color:rgba(0,0,0,.3);
+                            width:390px;
+                            height:200px;
+                            overflow:hidden;
+                            z-index:777;
+                        ">
+                            <div style="
+                                font-size: 19px;
+                                font-weight: 800;
+                                background-color: #ffcc33;
+                                margin: 10px 0 7px 15px;
+                                width: 360px;
+                                text-align: center;
+                            ">
+                                Семинар «Управление реальностью»
+                            </div>
+                            <div style="
+                                font-size: 14px;
+                                margin: 7px 0 7px 15px;
+                                width: 360px;
+                                background-color: rgba(0,0,0,.5);
+                                color: #fff;
+                                padding: 5px 10px 10px;
+                                text-shadow: 1px 1px 3px #000;
+                            ">
+                                
+                                <i>(Выпуск 1-го квартала 2012г.)</i><br>
+                                В данном выпуске содержатся все записи<br>
+                                семинара «Управление реальностью» на<br>
+                                Тенерифе в 2012г.
+                            </div>
+                            <div style="
+                                font-size: 18px;
+                                color: #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 35px;
+                            ">
+                                <i>Старая цена: <strike>47€</strike></i>
+                            </div>
+                            <div style="
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: 800;
+                                text-shadow: 1px 1px 3px #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 5px;  
+                            ">                            
+                                Новая цена: <span style="font-size: 36px;position: relative;top: 6px;">35€</span>
+                            </div>
+                            <a style="
+                                position:absolute;
+                                bottom: 10px;
+                                right: 25px;
+                                z-index:777;
+                            "
+                            class="btn-cust" href="#">Купить</a>
+                        </div>
+                    </div>
+                    
+                    <!-- item -->
+                    <div class="item">
+                        <img class="slider-bg-image" src="img/fig6.png" alt="" style="opacity:.5">
+                        <div style="
+                            width:303px;
+                            height:138px;
+                            position:absolute;
+                            top:26px;
+                            left:112px;
+                            background:url(img/fig27.png) no-repeat 0 0 transparent;
+                            background-size: 303px 138px;
+                            z-index:777;
+                        ">
+                            <div style="text-align:center;padding-right:27px;">
+                                <span style="font-size:30px;font-weight:800;">Внимание!</span><br>
+                                <span style="font-size:18px;font-weight:800;">До конца месяца действует </span><br>
+                                <span style="font-size:30px;font-weight:800;text-transform:uppercase;">АКЦИЯ! Спешите</span><br>
+                                <span style="font-size:20px;font-weight:800;text-transform:uppercase;">преобрести курс!</span>
+                            </div>
+                        </div>
+                        <div style="
+                            position:absolute;
+                            top: 10px;
+                            left: 420px;
+                            background-color:rgba(0,0,0,.3);
+                            width:390px;
+                            height:200px;
+                            overflow:hidden;
+                            z-index:777;
+                        ">
+                            <div style="
+                                font-size: 19px;
+                                font-weight: 800;
+                                background-color: #ffcc33;
+                                margin: 10px 0 7px 15px;
+                                width: 360px;
+                                text-align: center;
+                            ">
+                                Семинар «Управление реальностью»
+                            </div>
+                            <div style="
+                                font-size: 14px;
+                                margin: 7px 0 7px 15px;
+                                width: 360px;
+                                background-color: rgba(0,0,0,.5);
+                                color: #fff;
+                                padding: 5px 10px 10px;
+                                text-shadow: 1px 1px 3px #000;
+                            ">
+                                
+                                <i>(Выпуск 1-го квартала 2012г.)</i><br>
+                                В данном выпуске содержатся все записи<br>
+                                семинара «Управление реальностью» на<br>
+                                Тенерифе в 2012г.
+                            </div>
+                            <div style="
+                                font-size: 18px;
+                                color: #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 35px;
+                            ">
+                                <i>Старая цена: <strike>47€</strike></i>
+                            </div>
+                            <div style="
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: 800;
+                                text-shadow: 1px 1px 3px #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 5px;  
+                            ">                            
+                                Новая цена: <span style="font-size: 36px;position: relative;top: 6px;">35€</span>
+                            </div>
+                            <a style="
+                                position:absolute;
+                                bottom: 10px;
+                                right: 25px;
+                                z-index:777;
+                            "
+                            class="btn-cust" href="#">Купить</a>
+                        </div>
+                    </div>
+                    
+                    <!-- item -->
+                    <div class="item">
+                        <img class="slider-bg-image" src="img/fig6.png" alt="" style="opacity:.5">
+                        <div style="
+                            width:303px;
+                            height:138px;
+                            position:absolute;
+                            top:26px;
+                            left:112px;
+                            background:url(img/fig27.png) no-repeat 0 0 transparent;
+                            background-size: 303px 138px;
+                            z-index:777;
+                        ">
+                            <div style="text-align:center;padding-right:27px;">
+                                <span style="font-size:30px;font-weight:800;">Внимание!</span><br>
+                                <span style="font-size:18px;font-weight:800;">До конца месяца действует </span><br>
+                                <span style="font-size:30px;font-weight:800;text-transform:uppercase;">АКЦИЯ! Спешите</span><br>
+                                <span style="font-size:20px;font-weight:800;text-transform:uppercase;">преобрести курс!</span>
+                            </div>
+                        </div>
+                        <div style="
+                            position:absolute;
+                            top: 10px;
+                            left: 420px;
+                            background-color:rgba(0,0,0,.3);
+                            width:390px;
+                            height:200px;
+                            overflow:hidden;
+                            z-index:777;
+                        ">
+                            <div style="
+                                font-size: 19px;
+                                font-weight: 800;
+                                background-color: #ffcc33;
+                                margin: 10px 0 7px 15px;
+                                width: 360px;
+                                text-align: center;
+                            ">
+                                Семинар «Управление реальностью»
+                            </div>
+                            <div style="
+                                font-size: 14px;
+                                margin: 7px 0 7px 15px;
+                                width: 360px;
+                                background-color: rgba(0,0,0,.5);
+                                color: #fff;
+                                padding: 5px 10px 10px;
+                                text-shadow: 1px 1px 3px #000;
+                            ">
+                                
+                                <i>(Выпуск 1-го квартала 2012г.)</i><br>
+                                В данном выпуске содержатся все записи<br>
+                                семинара «Управление реальностью» на<br>
+                                Тенерифе в 2012г.
+                            </div>
+                            <div style="
+                                font-size: 18px;
+                                color: #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 35px;
+                            ">
+                                <i>Старая цена: <strike>47€</strike></i>
+                            </div>
+                            <div style="
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: 800;
+                                text-shadow: 1px 1px 3px #000;
+                                position: absolute;
+                                left: 15px;
+                                bottom: 5px;  
+                            ">                            
+                                Новая цена: <span style="font-size: 36px;position: relative;top: 6px;">35€</span>
+                            </div>
+                            <a style="
+                                position:absolute;
+                                bottom: 10px;
+                                right: 25px;
+                                z-index:777;
+                            "
+                            class="btn-cust" href="#">Купить</a>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+            </div>
+
+            <!--Projects-->
+            <div class="[ our-projects -layout-for-main-page ]">
+                <div class="our-projects_wrap">
+                    <div class="our-projects_title">Наши проекты:</div>
+                    <ul class="our-projects_list">
+                        <li class="our-projects_item"><a href="#">Школа эффективных лидеров</a></li>
+                        <li class="our-projects_item"><a href="#">Аналитический клуб</a></li>
+                        <li class="our-projects_item"><a href="#">Канал психомедиа</a></li>
+                        <li class="our-projects_item"><a href="#">Бесплатные расслылки</a></li>
+                        <li class="our-projects_item"><a href="#">gilbo.ru</a></li>
+                        <li class="our-projects_item"><a href="#">gilbo.com</a></li>
+                        <li class="our-projects_item"><a href="#">webinar.gilbo.com</a></li>
+                        <li class="our-projects_item"><a href="#">mediascan.ru</a></li>
+                        <li class="our-projects_item"><a href="#">psychomedia.org</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Panel-->
+        <div class="container">
+            <div class="panel-cust">Популярные записи семинаров:</div>
+        </div>
+
+        <!--Price cards-->
+        <div class="container [ card-grid -col5 ]">
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig7.png" alt="">
+                        </div>
+                        <div class="card_name">Расширение бизнеса</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig8.png" alt="">
+                        </div>
+                        <div class="card_name">Технология карьеры</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig9.png" alt="">
+                        </div>
+                        <div class="card_name">Личный успех</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig10.png" alt="">
+                        </div>
+                        <div class="card_name">Решение проблем</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig7.png" alt="">
+                        </div>
+                        <div class="card_name">Расширение бизнеса</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig7.png" alt="">
+                        </div>
+                        <div class="card_name">Расширение бизнеса</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig8.png" alt="">
+                        </div>
+                        <div class="card_name">Технология карьеры</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig9.png" alt="">
+                        </div>
+                        <div class="card_name">Личный успех</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig10.png" alt="">
+                        </div>
+                        <div class="card_name">Решение проблем</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               <div class="card-grid_item">
+                    <div class="card">
+                        <div class="card_img">
+                            <img src="img/fig7.png" alt="">
+                        </div>
+                        <div class="card_name">Расширение бизнеса</div>
+                        <div class="card_price">28€</div>
+                        <a class="btn-cust" href="#">Купить</a>
+                    </div>
+               </div>
+               
+        </div>
+
+        <!--Just text-->
+        <div class="container some-text">
+                <p>Проект «Круг посвящённых» - это периодически обновляемый сборник Клуба Эффективных Лидеров. В ежеквартальных и специальных выпусках размещаются разные материалы,
+способствующие личностному росту подписчиков. В каждом выпуске как правило публикуются аудиоматериалы (любительские записи с семинаров Клуба, сделанные их участниками,
+аудиолекции Е.В.Гильбо и других преподавателей), учебные и научно-популярные материалы, позволяющие расширить кругозор, а также методики самостоятельных занятий по
+личностному росту. Освоение всех этих материалов не требует предварительной подготовки и может быть полезно как кандидатам на вступление в Клуб Эффективных лидеров, которые
+ещё не решились начать систематическое обучение в ШЭЛ, но уже вступили на путь личностного роста, так и учащимся и выпускникам ШЭЛ, в качестве факультативных дополнений
+к основным материалам ШЭЛ.</p>
+                <p>Вы можете как приобретать квартальные выпуски «Круга посвящённых» поштучно, так и приобрести годовую подписку на все квартальные выпуски (начиная с 2009 года). Специальные
+выпуски Вы также можете приобрести как поштучно, так и оптом весь архив спецвыпусков, объединяющий материалы 2001-2008 годов.
+</p>
+                <p>Подписчикам текущих выпусков и обладателям годовой подписки доступны также специальные бесплатные бонусы, среди которых могут быть, например, доступ к библиотеке ШЭЛ,
+или «учебный курс месяца» по какой-либо отрасли знания, возможность скачать единым файлом архив рассылки «Наука лидерства» и так далее.
+</p>
+                <p>Зарегистрируйтесь на нашем сайте в качестве участника проекта – это откроет Вам возможность приобретать выпуски «Круга посвящённых». Войдя в качестве зарегистрированного
+пользователя, в таблице ниже Вы можете выбрать интересующие Вас выпуски или подписки и приобрести их.
+</p>
+                <p>Доступ к приобретенным Вами материалам осуществляется в автоматчическом режиме, после осуществления покупки с помощью одной из поддерживаемых платежных систем.
+Вам будут предоставлены ссылки для скачивания файлов, купленного Вами выпуска, с нашего сайта. В случае, если Вы оплатили один из взносов Клуба Эффективных Лидеров,
+информация об платеже автоматически поступает в бухгалтерию проекта, которая проинформирует Вас об успешной оплате взноса либо сообщит о проблемах, которые мешают оплате.
+</p>
+                <p>При возникновении трудностей в осуществлении оплаты - обращайтесь в тех. службу проекта (контактные сведения находятся внизу страницы).</p>
+        </div>
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+               <!--tech-support-->
+                <div class="[ tech-support -footer ]">
+                    <div class="tech-support_text1">Техподдержка:</div>
+                    <div class="tech-support_text2">support.mediascan.ru</div>
+                    <div class="tech-support_text3">support@mediascan.ru</div>
+                </div>
+                <!--payments-->
+                <div class="[ pay-way -footer ]">
+                    <div class="pay-way_text">Принимаем к оплате:</div>
+                    <div class="pay-way_img">
+                        <img src="img/fig13.png" alt="pay">
+                    </div>
+                </div>
+                <!--copyright-->
+                <div class="[ copyright -footer ]">Copyright © Евгений Гильбо 1989 – 2014</div>
+            </div>
+        </footer>
+
+        <!--Scripts-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--Boo js-->
+        <script src='vendor/bootstrap/js/bootstrap.min.js'></script>
+        <!-- Carousel js -->
+        <script type="text/javascript" src="js/jquery.jcarousellite.js"></script>
+        <script>
+            $(function() {
+                $(".slides-wrap").jCarouselLite({                    
+                    btnNext: ".next",
+                    btnPrev: ".prev",
+                    visible: 5,
+                });
+            });
+        </script>
+
+    </body>
+</html>
